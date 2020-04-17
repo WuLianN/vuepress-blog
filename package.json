@@ -1,0 +1,20 @@
+{
+    "name": "xxx",
+    "version": "1.0.0",
+    "description": "it is my blog",
+    "license": "MIT",
+    "author": "xxx",
+    "scripts": {
+        "dev": "vuepress dev docs",
+        "build": "vuepress build docs"
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "loadsh": "^0.0.4",
+        "vuepress": "^1.4.1"
+    },
+    "devDependencies": {
+        "@vuepress/plugin-blog": "^1.9.2",
+        "@vuepress/plugin-search": "^1.4.0"
+    }
+}
