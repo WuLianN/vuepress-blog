@@ -11,6 +11,7 @@
 [官方blog插件](https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html)
 
 
+<br />
 
 **所有的markdown文件都会被转化为html**
 
@@ -20,6 +21,8 @@
 | /guide/README.md | /guide/      |
 | /config.md       | /config.html |
 
+
+<br />
 
 
 **docs目录介绍**
@@ -31,6 +34,7 @@
 | 其他      | 路由功能->链接跳转(编程、摄影、生活) |
 
 
+<br />
 
 **.vuepress目录介绍**
 
@@ -43,6 +47,7 @@
 | enhanceApp.js | 客户端应用的增强      |
 
 
+<br />
 
 **theme目录介绍**
 
@@ -57,7 +62,7 @@
 注：Tags、Tag、TechLog需要安装@vuepress/blog插件，并且在comfig.js中配置。
 
 
-
+<br />
 
 ## blog插件的功能
 
@@ -66,7 +71,9 @@
 
 
 
-## :pensive：坑
+## :pensive: 坑
+
+<br />
 
 **代码块中的语法 无法 高亮**
 
