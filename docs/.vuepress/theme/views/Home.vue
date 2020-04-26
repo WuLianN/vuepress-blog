@@ -2,7 +2,7 @@
   <div class="home" :style="{height: height}">
     <div class="left">
       <div class="blogger">
-        <img class="blogger-avatar" src="../../public/avatar.jpg" alt />
+        <img class="blogger-avatar" src="https://api.bearcub.club/user/avatar.jpg" alt />
         <div class="blogger-name">WuLianN</div>
         <div class="blogger-link">
           <a href="https://github.com/WuLianN" target="_block">
@@ -40,7 +40,7 @@ export default {
 .home {
   width: 1200px;
   height: 500px;
-  background: #f9f9f9;
+  background: #f4f3f3;
 }
 
 .left {

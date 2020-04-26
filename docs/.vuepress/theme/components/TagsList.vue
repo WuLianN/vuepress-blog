@@ -50,14 +50,14 @@ export default {
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
-  padding: 30px 0 0 0;
+  align-content: flex-start;
 }
 
 .tag {
   width: 555px;
   height: 300px;
   display: flex;
-  margin: 0 0 30px 30px;
+  margin: 30px 0 0 30px;
   cursor: pointer;
   background-size: 100% 100%;
 }

@@ -23,8 +23,7 @@ export default {
     this.tagData = JSON.parse(JSON.stringify(this.$frontmatterKey.list));
     this.tagData.forEach((item, index) => {
       let img = tagImg[index];
-      let imgLink = `/tag/${img}`;
-      this.$set(item, "img", imgLink);
+      this.$set(item, "img", img);
     });
   },
 

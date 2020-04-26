@@ -1,28 +1,30 @@
 <template>
   <div class="tech">
-    <div
-      class="card"
-      :style="{backgroundImage: randomColor(item)}"
-      v-for="(item, index) in data"
-      :key="index"
-      @click="go(item)"
-    >
-      <div class="card-header">{{item.title}}</div>
-      <div class="card-content">{{item.summary}}</div>
-      <div class="card-tag">
-        <button
-          class="card-tag-btn"
-          v-for="(item, index) in item.frontmatter.tag"
-          :key="index"
-          :style="{color: getTagColor(item)}"
-          @click.stop="sort(item)"
-        >{{item}}</button>
-      </div>
+    <div>
+      <div
+        class="card"
+        :style="{backgroundImage: randomColor(item)}"
+        v-for="(item, index) in data"
+        :key="index"
+        @click="go(item)"
+      >
+        <div class="card-header">{{item.title}}</div>
+        <div class="card-content">{{item.summary}}</div>
+        <div class="card-tag">
+          <button
+            class="card-tag-btn"
+            v-for="(item, index) in item.frontmatter.tag"
+            :key="index"
+            :style="{color: getTagColor(item)}"
+            @click.stop="sort(item)"
+          >{{item}}</button>
+        </div>
 
-      <div class="card-footer">
-        <span>{{item.frontmatter.date}}</span>
-        <span>{{item.frontmatter.author}}</span>
-        <!-- <span>{{item.frontmatter.location}}</span> -->
+        <div class="card-footer">
+          <span>{{item.frontmatter.date}}</span>
+          <span>{{item.frontmatter.author}}</span>
+          <!-- <span>{{item.frontmatter.location}}</span> -->
+        </div>
       </div>
     </div>
 
@@ -178,9 +180,6 @@ export default {
 
 .tech {
   width: 1200px;
-  /* height: auto; */
-  display: flex;
-  flex-flow: row wrap;
   background: black;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
   padding: 30px 0 0 0;

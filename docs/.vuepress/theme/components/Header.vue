@@ -64,7 +64,7 @@ export default {
 .header {
   width: 1200px;
   height: 50px;
-  background: #f9f9f9;
+  background: #f4f3f3;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-flow: row nowrap;
@@ -111,21 +111,27 @@ export default {
 }
 
 .right-nav {
-  width: 145px;
+  width: 200px;
   height: 50px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 0 60px;
+  margin: 0 0 0 25px;
 }
 
 .blackColor {
-  color: black;
+  width: 60px;
+  height: 30px;
+  border-radius: 18.75%/50%;
+  color: #0862f2;
+  line-height: 30px;
+  text-align: center;
+  background: white;
 }
 
 .textAnimate {
-  animation: van-notice-bar-play 15s linear 1.5s infinite;
+  animation: van-notice-bar-play 15s linear 2s infinite;
 }
 
 @keyframes van-notice-bar-play {

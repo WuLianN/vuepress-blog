@@ -100,7 +100,8 @@ export default {
   width: 1200px;
   display: flex;
   flex-flow: row wrap;
-  background: url("../../public/car.jpg") 100% 100%;
+  align-content: flex-start;   
+  background: url("https://api.bearcub.club/tag/car.jpg") 100% 100%;
   background-size: 100% 100%;
 }
 
