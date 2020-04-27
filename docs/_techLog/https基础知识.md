@@ -4,8 +4,8 @@ slug: http
 tag:
 - HTTP
 
-title: https如何安全概念
-description: https如何安全概念!
+title: https如何安全?
+description: https如何安全?
 author: 夜深_静悟
 location: 东莞
 image: 'https://api.bearcub.club/tag/elephant.jpg'
@@ -27,15 +27,6 @@ meta:
 ---
 
 
-```nginx
-学习“透视HTTP协议”之安全篇
-对http/https有兴趣可以上"极客时间"购买，深入理解。
-```
-
-
-
-
-
 ## HTTP1.1 目前规定8种方法
 
 1. GET：获取资源，可以理解为读取获知下载数据
@@ -47,7 +38,7 @@ meta:
 7. OPTIONS：列出可对资源实行的方法
 8. TRACE：追踪请求 - 响应的传输路径
 
-
+<br />
 
 * post -> 增
 * delete -> 删
@@ -56,6 +47,7 @@ meta:
 
 
 
+<br />
 
 
 ## http 与 https 模型差别
@@ -63,8 +55,7 @@ meta:
 <img width="600" height="300" src="https://api.bearcub.club/tech/http/http-4.png">
 
 
-
-
+<br />
 
 ## 安全
 
@@ -78,6 +69,8 @@ meta:
 
 
 
+<br />
+
 
 
 ## 对称加密 
@@ -90,7 +83,7 @@ meta:
 
 
 
-
+<br />
 
 
 
@@ -102,6 +95,8 @@ meta:
 ```
 
 
+
+<br />
 
 
 
@@ -115,7 +110,7 @@ RSA、ECC
 
 
 
-
+<br />
 
 
 
@@ -125,7 +120,7 @@ RSA、ECC
 
 
 
-
+<br />
 
 
 
@@ -139,7 +134,7 @@ SHA224、SHA256、SHA384，分别能够生成 28 字节、32 字节、48 字节�
 
 
 
-
+<br />
 
 
 

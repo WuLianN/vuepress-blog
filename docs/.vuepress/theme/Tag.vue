@@ -2,7 +2,7 @@
   <keep-alive>
     <div class="tag">
       <Header />
-      <Card :pagesData="$pagination.pages" />
+      <Card :pagesData="$pagination.pages" :height=height />
       <Footer />
     </div>
   </keep-alive>
@@ -13,8 +13,19 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 export default {
+  data() {
+    return {
+      height: "0px"
+    };
+  },
+
   created() {
     console.log(this.$pagination.pages);
+  },
+
+  mounted() {
+    this.height = document.documentElement.clientHeight - 50 + "px";
+    console.log(this.height);
   },
 
   components: {

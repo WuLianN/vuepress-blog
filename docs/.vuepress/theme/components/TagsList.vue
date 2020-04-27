@@ -25,7 +25,10 @@ export default {
   },
 
   mounted() {
-    this.$refs.tagsList.style.height = `${window.innerHeight - 50}px`;
+    console.log(this.tagData);
+    if (this.tagData.length < 5) {
+      this.$refs.tagsList.style.height = `${window.innerHeight - 50}px`;
+    }
   },
 
   created() {
@@ -51,13 +54,14 @@ export default {
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
+  padding: 30px 0 0 0;
 }
 
 .tag {
   width: 555px;
   height: 300px;
   display: flex;
-  margin: 30px 0 0 30px;
+  margin: 0 0 30px 30px;
   cursor: pointer;
   background-size: 100% 100%;
 }
