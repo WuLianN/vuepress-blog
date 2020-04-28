@@ -91,14 +91,13 @@ export default {
 
 .tech {
   width: 1200px;
-  background: black;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
-  padding: 30px 0 0 0;
 }
 
 .card-wrap {
   display: flex;
   flex-flow: row wrap;
+  padding: 30px 0 0 0;
 }
 
 .card {
@@ -120,6 +119,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: black;
 }
 
 .loading {

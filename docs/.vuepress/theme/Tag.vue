@@ -1,21 +1,23 @@
 <template>
-  <keep-alive>
-    <div class="tag">
-      <Header />
-      <Card :pagesData="$pagination.pages" :height=height />
-      <Footer />
-    </div>
-  </keep-alive>
+  <div class="tag">
+    <Header />
+    <Card :pagesData="$pagination.pages" :height="height" />
+    <Footer />
+
+    <Universe :height="heightToCanvas" />
+  </div>
 </template>
 
 <script>
+import Universe from "./components/Universe";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 export default {
   data() {
     return {
-      height: "0px"
+      height: "",
+      heightToCanvas: ""
     };
   },
 
@@ -24,11 +26,12 @@ export default {
   },
 
   mounted() {
-    this.height = document.documentElement.clientHeight - 50 + "px";
-    console.log(this.height);
+    this.height = this.heightToCanvas =
+      document.documentElement.clientHeight - 50 + "px";
   },
 
   components: {
+    Universe,
     Header,
     Footer,
     Card
@@ -41,7 +44,8 @@ export default {
 <style scoped>
 .tag {
   width: 1200px;
-  height: auto;
+  height: 800px;
+  /* height: auto; */
   margin: 0 auto;
 }
 </style>

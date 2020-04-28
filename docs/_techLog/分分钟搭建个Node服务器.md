@@ -250,6 +250,22 @@ function uncompress(ctx) {
 更多详见 https://www.npmjs.com/package/compressing
 ```
 
+<br />
+
+## 监听端口
+使用http和https两种协议
+https 需要配置ssl证书
+```js
+const https = require('https')
+
+app.listen(3001) // http
+https.createServer(config.httpsOptions, app.callback()).listen(3000) // https
+
+更多详见 koa
+```
+
+<br />
+
 ## 总结
 1. 记录一些好用的中间件
 2. 要巩固基础，才能快速上手

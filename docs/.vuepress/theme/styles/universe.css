@@ -1,0 +1,43 @@
+.container {
+    width: 1200px;
+    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%);
+    position: absolute;
+    top: 50px;
+    z-index: -100;
+}
+
+.content {
+    width: inherit;
+    height: inherit;
+}
+
+#universe {
+    position: relative;
+}
+
+#footerContent {
+    font-family: sans-serif;
+    font-size: 110%;
+    color: rgba(200, 220, 255, .3);
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    padding: 20px;
+    text-align: center;
+    z-index: 20;
+}
+
+#footer {
+    position: absolute;
+    /* bottom: 0; */
+    bottom: 50px;
+    height: 300px;
+    width: 1200px;
+}
+
+#scene {
+    height: 100%;
+    /* position: absolute; */
+    /* left: 50%;
+    margin-left: -800px; */
+}
