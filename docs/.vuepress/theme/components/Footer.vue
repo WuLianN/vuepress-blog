@@ -2,8 +2,8 @@
   <div class="footer">
     <div class="footer-left"></div>
     <div class="footer-right">
-      <p>©2020 WuLianN</p>
-      <p>粤ICP备18115352号</p>
+      <p class="zIndex">©2020 WuLianN</p>
+      <p class="zIndex">粤ICP备18115352号</p>
     </div>
   </div>
 </template>
@@ -23,10 +23,12 @@ export default {
 </script>
 
 <style scoped>
+@import '../styles/zIndex.css';
+
 .footer {
   width: 1200px;
   height: 50px;
-  background: #f9f9f9;
+  background: #f4f3f3;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;

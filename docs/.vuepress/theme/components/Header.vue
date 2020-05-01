@@ -2,22 +2,22 @@
   <div class="header">
     <div class="left">
       <router-link to="/">
-        <img class="left-profile" src="../../public/profile.png" alt />
+        <img class="left-profile zIndex" src="../../public/profile.png" alt />
       </router-link>
     </div>
 
-    <div class="center" ref="center">
+    <div class="center zIndex" ref="center">
       <div class="centerText" ref="centerText" :class="{textAnimate: isScroll}">{{one}}</div>
     </div>
 
     <div class="right">
-      <div class="right-nav">
+      <div class="right-nav zIndex">
         <router-link class="blackColor" to="/tech/">编程</router-link>
         <router-link class="blackColor" to="/camera">摄影</router-link>
         <router-link class="blackColor" to="/life">生活</router-link>
       </div>
 
-      <SearchBox />
+      <SearchBox class="search" />
     </div>
   </div>
 </template>
@@ -61,6 +61,8 @@ export default {
 </script>
 
 <style scoped>
+@import "../styles/zIndex.css";
+
 .header {
   width: 1200px;
   height: 50px;
@@ -98,7 +100,7 @@ export default {
 .centerText {
   position: absolute;
   white-space: nowrap;
-  color: rgb(25, 137, 250)
+  color: rgb(25, 137, 250);
 }
 
 .right {
@@ -118,6 +120,12 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin: 0 0 0 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.search {
+  z-index: 100;
 }
 
 .blackColor {
@@ -131,7 +139,7 @@ export default {
 }
 
 .textAnimate {
-  animation: van-notice-bar-play 15s linear 2s infinite;
+  animation: van-notice-bar-play 15s ease-in 0s infinite;
 }
 
 @keyframes van-notice-bar-play {

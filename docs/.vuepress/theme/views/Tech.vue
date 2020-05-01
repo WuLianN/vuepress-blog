@@ -1,7 +1,7 @@
 <template>
   <div class="tech" :style="{height: height}">
     <div
-      class="card"
+      class="card zIndex"
       :style="{backgroundImage: randomColor(item)}"
       v-for="(item, index) in $pagination.pages"
       :key="index"
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="tech-pagination" :style="{top: height}">
+    <div class="tech-pagination zIndex" :style="{top: height}">
       <Pagination />
     </div>
   </div>
@@ -96,11 +96,12 @@ export default {
 </script>
 
 <style scoped>
+@import '../styles/zIndex.css';
 .tech {
   width: 1200px;
   display: flex;
   flex-flow: row wrap;
-  align-content: flex-start;   
+  align-content: flex-start;
   background: url("https://api.bearcub.club/tag/car.jpg") 100% 100%;
   background-size: 100% 100%;
 }

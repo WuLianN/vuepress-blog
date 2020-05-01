@@ -2,7 +2,7 @@
   <div class="tech" :style="{height: height}">
     <div class="card-wrap">
       <div
-        class="card"
+        class="card zIndex"
         :style="{backgroundImage: randomColor(item)}"
         v-for="(item, index) in pagesData"
         :key="index"
@@ -10,7 +10,7 @@
       >{{item.title}}</div>
     </div>
 
-    <div class="tech-pagination" :style="{top: height}">
+    <div class="tech-pagination zIndex" :style="{top: height}">
       <Pagination />
     </div>
 
@@ -88,10 +88,13 @@ export default {
 
 <style scoped>
 @import "../styles/truck.css";
+@import "../styles/zIndex.css";
 
 .tech {
   width: 1200px;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
+  background: url("https://api.bearcub.club/tag/car.jpg") 100% 100%;
+  background-size: 100% 100%;
 }
 
 .card-wrap {

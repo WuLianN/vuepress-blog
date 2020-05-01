@@ -18,3 +18,12 @@ export function clearArray(array) {
   array.splice(0, length)
   return array
 }
+
+export function isNight() {
+  const hour = new Date().getHours()
+  if (6 < hour && hour < 18) {
+    return false
+  } else {
+    return true
+  }
+}

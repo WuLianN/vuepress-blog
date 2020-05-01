@@ -4,11 +4,16 @@
 
     <div class="content" :style="{height: height}">
       <ClientOnly>
-        <component :is="layout" :height="height" />
+        <component :is="layout" :height="height" :weather="weather" />
       </ClientOnly>
     </div>
 
     <Footer />
+    
+    <!-- 黑夜主题 -->
+    <!-- <div class="theme" ></div> -->
+
+    <universeForTheme v-if="needTheme" />
   </div>
 </template>
 
@@ -19,20 +24,37 @@ import Home from "./views/Home";
 import Tech from "./views/Tech";
 import Camera from "./views/Camera";
 import Life from "./views/Life";
-import { getCurrentPage } from "./utils/";
+import universeForTheme from './components/universeForTheme'
+import { getCurrentPage, isNight } from "./utils";
 import { routerConfig } from "./utils/themeConfig";
-import { getOne } from "./api/one";
+import { getOne, getWeather } from "./api";
 
 export default {
   data() {
     return {
       height: "0px",
-      one: ""
+      one: "",
+      weather: {
+        province: "广东",
+        city: "东莞市",
+        adcode: "441900",
+        weather: "多云",
+        temperature: "28",
+        winddirection: "东南",
+        windpower: "≤3",
+        humidity: "64",
+        reporttime: "2020-05-01 12:22:29"
+      },
+      needTheme: false
+
+      // weather: null
     };
   },
 
   created() {
     // console.log(this.$pagination.pages);
+    console.log(isNight())
+    this.needTheme = isNight()
   },
 
   mounted() {
@@ -50,6 +72,15 @@ export default {
       .catch(err => {
         console.log(err);
       });
+
+    // 获取天气预报
+    // getWeather().then(res => {
+    //   console.log(res.data);
+    //   // 将数据存储到
+
+    //   this.weather = res.data.weather;
+
+    // });
   },
 
   computed: {
@@ -66,7 +97,8 @@ export default {
     Tech,
     Footer,
     Camera,
-    Life
+    Life,
+    universeForTheme
   }
 };
 </script>
@@ -82,4 +114,5 @@ export default {
   width: 1200px;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
 }
+
 </style>

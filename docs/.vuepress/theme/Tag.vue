@@ -3,8 +3,8 @@
     <Header />
     <Card :pagesData="$pagination.pages" :height="height" />
     <Footer />
-
-    <Universe :height="heightToCanvas" />
+<!-- 
+    <Universe :height="heightToCanvas" /> -->
   </div>
 </template>
 

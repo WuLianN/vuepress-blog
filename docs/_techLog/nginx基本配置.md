@@ -80,7 +80,9 @@ server {
     server_name         example.com;
     location / {
     proxy_pass   http://private_ip_address:3000; # 要代理的服务器
-    proxy_set_header Host $host
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr; # 获取ip
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 获取代理后ip
    } 
 }
 
