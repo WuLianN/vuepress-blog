@@ -11,8 +11,6 @@
     <Footer />
     
     <!-- 黑夜主题 -->
-    <!-- <div class="theme" ></div> -->
-
     <universe v-if="needTheme" />
   </div>
 </template>
@@ -41,7 +39,6 @@ export default {
 
   created() {
     // console.log(this.$pagination.pages);
-    console.log(isNight())
     this.needTheme = isNight()
   },
 

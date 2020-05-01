@@ -19,6 +19,18 @@
             margin: 0;
             padding: 0;
         }
+
+        * {
+            /* 兼容firefox */
+            scrollbar-width: none;
+            /* 兼容IE */
+            -ms-overflow-style: none;
+        }
+
+        /* 兼容chrome */
+        *::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 

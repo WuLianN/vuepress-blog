@@ -16,8 +16,16 @@
             position: relative;
         }
 
-        #app{
-            position: relative;
+        * {
+            /* 兼容firefox */
+            scrollbar-width: none;
+            /* 兼容IE */
+            -ms-overflow-style: none;
+        }
+
+        /* 兼容chrome */
+        *::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>

@@ -214,7 +214,7 @@
 <script>
 import Star from "../utils/universe";
 export default {
-  name: 'universe',
+  name: "universe",
   data() {
     return {
       canva: "",
@@ -237,8 +237,10 @@ export default {
       window.webkitRequestAnimationFrame ||
       window.msRequestAnimationFrame;
 
-    this.width = document.documentElement.clientWidth;
-    this.height = document.documentElement.clientHeight - 50;
+    // this.width = window.innerWidth;
+    this.width = document.documentElement.clientWidth - 50;
+
+    this.height = window.innerHeight;
 
     const canva = this.$refs.universe;
 

@@ -25,7 +25,6 @@
           <img class="weather-type-logo zIndex" :src="weatherTypeLogo" alt />
           <span class="weather-type-text">{{weather.weather}}</span>
         </div>
-        <div></div>
         <div class="flex">{{weather.temperature}}°C</div>
       </div>
     </div>
@@ -37,7 +36,9 @@ import { weatherTypeConfig } from "../utils/themeConfig";
 export default {
   name: "home",
   data() {
-    return {};
+    return {
+      
+    };
   },
 
   computed: {
@@ -70,7 +71,9 @@ export default {
     weather: Object
   },
 
-  created() {},
+  created() {
+    
+  },
 
   components: {},
 
