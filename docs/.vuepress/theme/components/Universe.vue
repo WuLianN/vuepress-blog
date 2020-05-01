@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :style="{height: heightToCanvas}">
+  <div class="container">
     <div class="content">
       <canvas id="universe" ref="universe"></canvas>
       <div id="footer">
@@ -214,6 +214,7 @@
 <script>
 import Star from "../utils/universe";
 export default {
+  name: 'universe',
   data() {
     return {
       canva: "",
@@ -229,10 +230,6 @@ export default {
     };
   },
 
-  props: {
-    heightToCanvas: String
-  },
-
   mounted() {
     window.requestAnimationFrame =
       window.requestAnimationFrame ||
@@ -240,7 +237,7 @@ export default {
       window.webkitRequestAnimationFrame ||
       window.msRequestAnimationFrame;
 
-    this.width = 1200;
+    this.width = document.documentElement.clientWidth;
     this.height = document.documentElement.clientHeight - 50;
 
     const canva = this.$refs.universe;

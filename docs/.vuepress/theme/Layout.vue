@@ -13,7 +13,7 @@
     <!-- 黑夜主题 -->
     <!-- <div class="theme" ></div> -->
 
-    <universeForTheme v-if="needTheme" />
+    <universe v-if="needTheme" />
   </div>
 </template>
 
@@ -24,7 +24,7 @@ import Home from "./views/Home";
 import Tech from "./views/Tech";
 import Camera from "./views/Camera";
 import Life from "./views/Life";
-import universeForTheme from './components/universeForTheme'
+import universe from './components/universe'
 import { getCurrentPage, isNight } from "./utils";
 import { routerConfig } from "./utils/themeConfig";
 import { getOne, getWeather } from "./api";
@@ -34,20 +34,8 @@ export default {
     return {
       height: "0px",
       one: "",
-      weather: {
-        province: "广东",
-        city: "东莞市",
-        adcode: "441900",
-        weather: "多云",
-        temperature: "28",
-        winddirection: "东南",
-        windpower: "≤3",
-        humidity: "64",
-        reporttime: "2020-05-01 12:22:29"
-      },
-      needTheme: false
-
-      // weather: null
+      needTheme: false,
+      weather: null
     };
   },
 
@@ -74,13 +62,12 @@ export default {
       });
 
     // 获取天气预报
-    // getWeather().then(res => {
-    //   console.log(res.data);
-    //   // 将数据存储到
+    getWeather().then(res => {
+      // 将数据存储到
 
-    //   this.weather = res.data.weather;
+      this.weather = res.data.weather;
 
-    // });
+    });
   },
 
   computed: {
@@ -98,7 +85,7 @@ export default {
     Footer,
     Camera,
     Life,
-    universeForTheme
+    universe
   }
 };
 </script>

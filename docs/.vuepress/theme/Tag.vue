@@ -3,8 +3,6 @@
     <Header />
     <Card :pagesData="$pagination.pages" :height="height" />
     <Footer />
-<!-- 
-    <Universe :height="heightToCanvas" /> -->
   </div>
 </template>
 
@@ -17,7 +15,6 @@ export default {
   data() {
     return {
       height: "",
-      heightToCanvas: ""
     };
   },
 
@@ -26,12 +23,11 @@ export default {
   },
 
   mounted() {
-    this.height = this.heightToCanvas =
+    this.height =
       document.documentElement.clientHeight - 50 + "px";
   },
 
   components: {
-    Universe,
     Header,
     Footer,
     Card
