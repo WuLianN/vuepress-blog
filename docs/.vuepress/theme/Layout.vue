@@ -3,13 +3,15 @@
     <Header :one="one" />
 
     <div class="content" :style="{height: height}">
-      <ClientOnly>
-        <component :is="layout" :height="height" :weather="weather" />
-      </ClientOnly>
+      <keep-alive include="home">
+        <ClientOnly>
+          <component :is="layout" :height="height" />
+        </ClientOnly>
+      </keep-alive>
     </div>
 
     <Footer />
-    
+
     <!-- 黑夜主题 -->
     <universe v-if="needTheme" />
   </div>
@@ -22,7 +24,7 @@ import Home from "./views/Home";
 import Tech from "./views/Tech";
 import Camera from "./views/Camera";
 import Life from "./views/Life";
-import universe from './components/universe'
+import universe from "./components/universe";
 import { getCurrentPage, isNight } from "./utils";
 import { routerConfig } from "./utils/themeConfig";
 import { getOne, getWeather } from "./api";
@@ -32,14 +34,13 @@ export default {
     return {
       height: "0px",
       one: "",
-      needTheme: false,
-      weather: null
+      needTheme: false
     };
   },
 
   created() {
     // console.log(this.$pagination.pages);
-    this.needTheme = isNight()
+    this.needTheme = isNight();
   },
 
   mounted() {
@@ -57,19 +58,11 @@ export default {
       .catch(err => {
         console.log(err);
       });
-
-    // 获取天气预报
-    getWeather().then(res => {
-      // 将数据存储到
-
-      this.weather = res.data.weather;
-
-    });
   },
 
   computed: {
     layout() {
-      console.log(this.$page.path);
+      // console.log(this.$page.path);
       const name = getCurrentPage(this.$page.path);
       return routerConfig[name]();
     }
@@ -98,5 +91,4 @@ export default {
   width: 1200px;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
 }
-
 </style>

@@ -16,73 +16,35 @@
     </div>
 
     <div class="right">
-      <div class="weather">
-        <div class="weather-location flex">
-          <img class="weather-location-logo" src="../../public/location.png" alt="loction" />
-          <span>{{weather.city}}</span>
-        </div>
-        <div class="weather-type flex">
-          <img class="weather-type-logo zIndex" :src="weatherTypeLogo" alt />
-          <span class="weather-type-text">{{weather.weather}}</span>
-        </div>
-        <div class="flex">{{weather.temperature}}°C</div>
-      </div>
+      <Weather />
     </div>
   </div>
 </template>
 
 <script>
-import { weatherTypeConfig } from "../utils/themeConfig";
+import Weather from "../components/Weather";
 export default {
   name: "home",
   data() {
-    return {
-      
-    };
-  },
-
-  computed: {
-    weatherTypeLogo: function() {
-      const weatherType = this.weather.weather;
-      const weather = weatherTypeConfig[weatherType];
-      let imgUrl;
-
-      if (weather) {
-        const hour = new Date().getHours();
-
-        if (weather === "晴.png" && hour >= 19) {
-          imgUrl = "夜晴.png";
-        } else if (weather === "日间多云.png" && hour >= 19) {
-          imgUrl = "夜间多云.png";
-        } else {
-          imgUrl = weather;
-        }
-      } else {
-        imgUrl = "无.png";
-      }
-
-      // 这里有个 坑 需要解释哦  外部引入完整连接 -> cannot find module
-      return require("../../public/" + imgUrl);
-    }
+    return {};
   },
 
   props: {
-    height: String,
-    weather: Object
+    height: String
   },
 
-  created() {
-    
-  },
+  created() {},
 
-  components: {},
+  components: {
+    Weather
+  },
 
   methods: {}
 };
 </script>
 
 <style scoped>
-@import '../styles/zIndex.css';
+@import "../styles/zIndex.css";
 .home {
   width: 1200px;
   height: 500px;
@@ -148,48 +110,5 @@ export default {
   width: 200px;
   height: auto;
   /* border: 1px solid red; */
-}
-
-.weather {
-  width: 200px;
-  height: 200px;
-  background: white;
-  padding: 10px 0 0 0;
-}
-
-.weather-location {
-  position: relative;
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
-}
-
-.weather-location-logo {
-  width: 30px;
-  height: 30px;
-  margin: 0 0 0 -20px;
-}
-
-.weather-type {
-  position: relative;
-  width: 100%;
-  margin: 10px 0;
-}
-
-.weather-type-logo {
-  width: 100px;
-  height: 100px;
-}
-
-.weather-type-text {
-  align-self: flex-end;
-  position: absolute;
-  left: 80px;
-}
-
-.flex {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
 }
 </style>

@@ -40,7 +40,7 @@ export default {
   name: "tech",
 
   created() {
-    console.log(document.documentElement.clientHeight, window.innerHeight);
+    // console.log(document.documentElement.clientHeight, window.innerHeight);
     // console.log(this.$pagination);
   },
 
