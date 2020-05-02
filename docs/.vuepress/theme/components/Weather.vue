@@ -1,5 +1,5 @@
-<template>
-  <div class="weather" v-if="weather">
+<template v-if="weather">
+  <div class="weather">
     <div class="weather-location flex">
       <img class="weather-location-logo" src="../../public/location.png" alt="loction" />
       <span>{{weather.city}}</span>
@@ -19,7 +19,7 @@ export default {
   name: "weather",
   data() {
     return {
-      weather: null
+      weather: ''
     };
   },
 

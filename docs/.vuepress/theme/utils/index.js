@@ -21,7 +21,7 @@ export function clearArray(array) {
 
 export function isNight() {
   const hour = new Date().getHours()
-  if (6 < hour && hour < 18) {
+  if (6 < hour && hour < 19) {
     return false
   } else {
     return true
