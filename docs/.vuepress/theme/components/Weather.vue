@@ -6,8 +6,8 @@
     </div>
     <div class="weather-type flex">
       <img class="weather-type-logo zIndex" :src="weatherTypeLogo" alt />
-      <span class="weather-type-text">{{weather.weather}}</span>
     </div>
+    <div class="weather-type-text flex">{{weather.weather}}</div>
     <div class="flex">{{weather.temperature}}°C</div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   name: "weather",
   data() {
     return {
-      weather: ''
+      weather: ""
     };
   },
 
@@ -85,7 +85,6 @@ export default {
 .weather-type {
   position: relative;
   width: 100%;
-  margin: 10px 0;
 }
 
 .weather-type-logo {
@@ -94,9 +93,7 @@ export default {
 }
 
 .weather-type-text {
-  align-self: flex-end;
-  position: absolute;
-  left: 80px;
+   margin: 0 0 10px 0;
 }
 
 .flex {

@@ -13,7 +13,7 @@
     <Footer />
 
     <!-- 黑夜主题 -->
-    <universe v-if="needTheme" />
+    <Universe v-if="needTheme" />
   </div>
 </template>
 
@@ -24,7 +24,7 @@ import Home from "./views/Home";
 import Tech from "./views/Tech";
 import Camera from "./views/Camera";
 import Life from "./views/Life";
-import universe from "./components/universe";
+import Universe from "./components/Universe";
 import { getCurrentPage, isNight } from "./utils";
 import { routerConfig } from "./utils/themeConfig";
 import { getOne, getWeather } from "./api";
@@ -40,11 +40,13 @@ export default {
 
   created() {
     // console.log(this.$pagination.pages);
-    this.needTheme = isNight();
   },
 
   mounted() {
     this.height = document.documentElement.clientHeight - 50 + "px";
+
+    this.needTheme = isNight();
+    console.log("isNight :" + this.needTheme);
 
     getOne()
       .then(res => {
@@ -75,7 +77,7 @@ export default {
     Footer,
     Camera,
     Life,
-    universe
+    Universe
   }
 };
 </script>
