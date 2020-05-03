@@ -5,7 +5,7 @@
       <span>{{weather.city}}</span>
     </div>
     <div class="weather-type flex">
-      <img class="weather-type-logo zIndex" :src="weatherTypeLogo" alt />
+      <img class="weather-type-logo zIndex" ref="logo" :src="weatherTypeLogo" alt />
     </div>
     <div class="weather-type-text flex">{{weather.weather}}</div>
     <div class="flex">{{weather.temperature}}°C</div>
@@ -23,8 +23,6 @@ export default {
     };
   },
 
-  created() {},
-
   computed: {
     weatherTypeLogo: function() {
       const weatherType = this.weather.weather;
@@ -32,7 +30,7 @@ export default {
       let imgUrl;
       if (weather) {
         const hour = new Date().getHours();
-        if (weather === "晴.png" && hour >= 19) {
+        if (weather === "日晴.png" && hour >= 19) {
           imgUrl = "夜晴.png";
         } else if (weather === "日间多云.png" && hour >= 19) {
           imgUrl = "夜间多云.png";
@@ -93,7 +91,7 @@ export default {
 }
 
 .weather-type-text {
-   margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .flex {

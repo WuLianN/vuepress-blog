@@ -19,6 +19,7 @@
 <script>
 import { needRepo, getTheBestRepo } from "../api";
 export default {
+  name: 'repo',
   data() {
     return {
       repoData: []

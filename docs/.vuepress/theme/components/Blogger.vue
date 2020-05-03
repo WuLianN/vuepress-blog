@@ -6,6 +6,9 @@
       <a href="https://github.com/WuLianN" target="_block">
         <img class="blogger-link-github-logo" src="../../public/github.png" alt="github" />
       </a>
+       <a href="https://admin.bearcub.club" target="_block">
+        <img class="blogger-link-github-logo" src="../../public/profile.png" alt="admin" />
+      </a>
     </div>
 
     <div class="blogger-text">喜欢花里胡哨的东西</div>
@@ -40,12 +43,14 @@
   width: 200px;
   height: 30px;
   position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
 .blogger-link-github-logo {
   width: 30px;
   height: 30px;
-  display: block;
   display: block;
   margin: 0 auto;
 }
