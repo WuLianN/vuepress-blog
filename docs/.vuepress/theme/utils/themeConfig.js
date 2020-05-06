@@ -25,8 +25,11 @@ const bear = baseUrl + 'bear.jpg'
 const elephant = baseUrl + 'elephant.jpg'
 const raccoon = baseUrl + 'raccoon.jpg'
 const snail = baseUrl + 'snail.jpg'
-const cat = baseUrl + 'cat.jpg'
-export const tagImg = [duck, bear, elephant, raccoon, snail, cat]
+const jellyfish = baseUrl + 'jellyfish.jpg'
+const turtle = baseUrl + 'turtle.jpg'
+const whiteFox = baseUrl + 'whiteFox.jpg'
+
+export const tagImg = [duck, bear, elephant, raccoon, snail, jellyfish, turtle, whiteFox]
 
 export const weatherTypeConfig = {
     '晴': '日晴.png',
@@ -48,9 +51,7 @@ export const weatherTypeConfig = {
     '冻雨': '冻雨.png',
     '雨夹雪': '雨夹雪.png',
     '雷阵雨并伴有冰雹': '雷阵雨并伴有冰雹.png',
-
     '阴': '阴.png',
-
     '小雪': '小雪.png',
     '中雪': '中雪.png',
     '大雪': '大雪.png',
@@ -59,17 +60,14 @@ export const weatherTypeConfig = {
     '小雪-中雪': '小到中雪.png',
     '中雪-大雪': '中到大雪.png',
     '大雪-暴雪': '大到暴雪.png',
-
     '霾': '霾.png',
     '中度霾': '中度霾.png',
     '重度霾': '重度霾.png',
     '严重霾': '严重霾.png',
-
     '浮尘': '浮尘.png',
     '扬沙': '扬沙.png',
     '沙尘暴': '沙尘暴.png',
     '强沙尘暴': '强沙尘暴.png',
-
     '雾': '雾.png',
     '轻雾': '雾.png',
     '浓雾': '浓雾.png',

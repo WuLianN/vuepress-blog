@@ -1,14 +1,14 @@
-<template v-if="weather">
-  <div class="weather">
+<template>
+  <div class="weather" v-if="hasData">
     <div class="weather-location flex">
       <img class="weather-location-logo" src="../../public/location.png" alt="loction" />
-      <span>{{weather.city}}</span>
+      <span>{{weather.weather.city}}</span>
     </div>
     <div class="weather-type flex">
-      <img class="weather-type-logo zIndex" ref="logo" :src="weatherTypeLogo" alt />
+      <img class="weather-type-logo zIndex" ref="logo" :src="imgUrl" alt />
     </div>
-    <div class="weather-type-text flex">{{weather.weather}}</div>
-    <div class="flex">{{weather.temperature}}°C</div>
+    <div class="weather-type-text flex">{{weather.weather.weather}}</div>
+    <div class="flex">{{weather.weather.temperature}}°C</div>
   </div>
 </template>
 
@@ -19,37 +19,48 @@ export default {
   name: "weather",
   data() {
     return {
-      weather: ""
+      weather: "",
+      imgUrl: "",
+      hasData: false
     };
   },
 
-  computed: {
-    weatherTypeLogo: function() {
-      const weatherType = this.weather.weather;
+  watch: {
+    weather: function() {
+      const weatherType = this.weather.weather.weather;
       const weather = weatherTypeConfig[weatherType];
-      let imgUrl;
+
       if (weather) {
         const hour = new Date().getHours();
         if (weather === "日晴.png" && hour >= 19) {
-          imgUrl = "夜晴.png";
+          this.imgUrl = require("../../public/夜晴.png");
         } else if (weather === "日间多云.png" && hour >= 19) {
-          imgUrl = "夜间多云.png";
+          this.imgUrl = require("../../public/夜间多云.png");
         } else {
-          imgUrl = weather;
+          this.imgUrl = require("../../public/" + weather);
         }
       } else {
-        imgUrl = "无.png";
+        this.imgUrl = require("../../public/无.png");
       }
-      // 这里有个 坑 需要解释哦  外部引入完整连接 -> cannot find module
-      return require("../../public/" + imgUrl);
     }
   },
 
   mounted() {
     // 获取天气预报
     getWeather().then(res => {
-      // 将数据存储到
-      this.weather = res.data.weather;
+      const result = res.data;
+
+      // 按照数据库数据的格式 { weather: data }
+      if (result.weather instanceof Object) {
+        // 数据库的数据
+        this.weather = res.data;
+        this.hasData = true;
+      } else {
+        // 高德的数据
+        const data = { weather: res.data };
+        this.weather = data;
+        this.hasData = true;
+      }
     });
   },
 

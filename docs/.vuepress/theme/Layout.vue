@@ -46,7 +46,6 @@ export default {
     this.height = document.documentElement.clientHeight - 50 + "px";
 
     this.needTheme = isNight();
-    console.log("isNight :" + this.needTheme);
 
     getOne()
       .then(res => {

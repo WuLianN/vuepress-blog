@@ -51,8 +51,6 @@ export default {
       } else {
         this.isScroll = false;
       }
-
-      console.log(centerWidth, centerTextWidth);
     }
   },
 
