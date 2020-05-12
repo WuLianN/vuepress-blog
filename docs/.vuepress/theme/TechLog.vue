@@ -7,7 +7,7 @@
       <FrontMatter :frontMatter="$page.frontmatter" />
       <Content class="md-content" />
     </div>
-
+    
     <Footer />
   </div>
 </template>

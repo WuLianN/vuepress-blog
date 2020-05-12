@@ -31,7 +31,7 @@ meta:
 搭建了node服务器，使用nginx反向代理，记录一下nginx的基本配置，慢慢学习！
 
 
-<br /> 
+<br> 
 
 ## https 配置
 
@@ -59,7 +59,7 @@ server {
 }
 ```
 
-<br /> 
+<br> 
 
 ## 重定向跳转(在http中配置)
 
@@ -69,7 +69,7 @@ rewrite ^  https://$host$request_uri permanent;   #永久重定向
 ```
 
 
-<br />  
+<br>  
 
 ## 反向代理(HttpProxy模块)
 
@@ -102,7 +102,7 @@ server {
 # 差别在 端口 ssl配置
 ```
 
-<br /> 
+<br> 
 
 ##  限制IP频繁请求
 
@@ -144,7 +144,7 @@ http {
 
 
 
-<br /> 
+<br> 
 
 
 
@@ -159,7 +159,7 @@ location ~* \.(gif|jpg|png|swf|flv)$ {
 }
 ```
 
-<br /> 
+<br> 
 
 ## 防盗链+静态资源
 

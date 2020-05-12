@@ -32,6 +32,24 @@ meta:
 * 扩展运算符 ...   
 * rest 参数 ...变量名 
 
+<br>
+
+任何 `Iterator`接口的对象都可以用**扩展运算符**转为真正的**数组**
+
+原生具备`Iterator`接口的数据结构如下：
+
+* Array
+* Map
+* Set
+* String
+* TypedArray
+* 函数的 arguments 对象
+* NodeList 对象
+
+默认的`Iterator`接口部署在数据结构的 Symbol.iterator 属性，或者说，一个数据结构只要具有 Symbol.iterator 属性，就可以认为是 “可遍历的”（iterable）。就可以使用 for...of 循环。
+
+<br>
+
 
 
 ## 数组
@@ -55,7 +73,7 @@ rest // 2, 3, 4
 
 
 
-<br />
+<br>
 
 
 
@@ -70,7 +88,21 @@ const all = [...arr1, ...arr2] // [1, 2, 3, 4]
 
 
 
-<br />
+<br>
+
+
+
+## 运用 - 数组去重
+
+```js
+const arr1 = [1, 1, 2, 2, 3]
+const arr2 = [...new Set(arr1)] // [1, 2, 3] 方法一
+const arr3 = Array.from(new Set(arr1)) // [1, 2, 3] 方法二
+```
+
+
+
+<br>
 
 
 
@@ -87,7 +119,7 @@ function length(str){
 
 
 
-<br />
+<br>
 
 
 
@@ -112,7 +144,7 @@ let aClone = Object.assign({}, a)
 
 
 
-<br />
+<br>
 
 
 
@@ -129,7 +161,7 @@ z // { a: 3, b: 4 }
 
 
 
-<br />
+<br>
 
 
 
@@ -145,7 +177,7 @@ ab // { a: 1, aa: 2, b: 3 }
 
 
 
-<br />
+<br>
 
 
 

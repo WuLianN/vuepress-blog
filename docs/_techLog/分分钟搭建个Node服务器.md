@@ -55,7 +55,7 @@ app.use(static(path.join(__dirname, staticPath), { maxAge: 31536000000 }))
 
 
 
-<br />
+<br>
 
 
 
@@ -92,7 +92,7 @@ schedule.scheduleJob('0 0 12 * * *', () => {
 
 
 
-<br />
+<br>
 
 
 
@@ -110,7 +110,7 @@ app.use(bodyParser())
 
 
 
-<br />
+<br>
 
 
 
@@ -153,7 +153,7 @@ app.use(cors({
 
 
 
-<br />
+<br>
 
 
 
@@ -202,7 +202,7 @@ const db = {
 
 
 
-<br />
+<br>
 
 
 
@@ -223,7 +223,7 @@ module.exports = upload.single('file') // 上传的方式
 更多详见 https://www.npmjs.com/package/@koa/multer
 ```
 
-<br />
+<br>
 
 压缩/解压 
 
@@ -250,7 +250,7 @@ function uncompress(ctx) {
 更多详见 https://www.npmjs.com/package/compressing
 ```
 
-<br />
+<br>
 
 ## 监听端口
 使用http和https两种协议
@@ -264,7 +264,7 @@ https.createServer(config.httpsOptions, app.callback()).listen(3000) // https
 更多详见 koa
 ```
 
-<br />
+<br>
 
 ## 总结
 1. 记录一些好用的中间件

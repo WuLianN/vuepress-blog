@@ -35,7 +35,7 @@ meta:
 使用addEventListener绑定事件，removeEventListener移除事件。其中，addEventListener中的函数使用了_.debounce()，防抖作用。  
 
 
-<br />
+<br>
 
 ## :angry: 结果
 
@@ -61,7 +61,7 @@ meta:
   }
 ```
 
-<br />
+<br>
 
 ## :sunglasses: 原因
 
@@ -71,7 +71,7 @@ _debounced() -> 返回新的 debounced（防抖动）函数。
 问题就出在 “新” ，导致add和remove中的函数名对应不上  
 
 
-<br />
+<br>
 
 ## :key: 解决方案：
 

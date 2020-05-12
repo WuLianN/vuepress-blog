@@ -4,8 +4,8 @@ slug: http
 tag:
 - HTTP
 
-title: https如何安全?
-description: https如何安全?
+title: https基础知识
+description: https基础知识
 author: 夜深_静悟
 location: 东莞
 image: 'https://api.bearcub.club/tag/elephant.jpg'
@@ -14,7 +14,7 @@ meta:
     content: http
 
   - name: description
-    content: http知识!
+    content: https基础知识!
 
   - name: keywords
     content: http
@@ -38,7 +38,7 @@ meta:
 7. OPTIONS：列出可对资源实行的方法
 8. TRACE：追踪请求 - 响应的传输路径
 
-<br />
+<br>
 
 * post -> 增
 * delete -> 删
@@ -47,7 +47,7 @@ meta:
 
 
 
-<br />
+<br>
 
 
 ## http 与 https 模型差别
@@ -55,7 +55,7 @@ meta:
 <img width="600" height="300" src="https://api.bearcub.club/tech/http/http-4.png">
 
 
-<br />
+<br>
 
 ## 安全
 
@@ -69,7 +69,7 @@ meta:
 
 
 
-<br />
+<br>
 
 
 
@@ -83,7 +83,7 @@ meta:
 
 
 
-<br />
+<br>
 
 
 
@@ -96,7 +96,7 @@ meta:
 
 
 
-<br />
+<br>
 
 
 
@@ -110,7 +110,7 @@ RSA、ECC
 
 
 
-<br />
+<br>
 
 
 
@@ -120,7 +120,7 @@ RSA、ECC
 
 
 
-<br />
+<br>
 
 
 
@@ -134,7 +134,7 @@ SHA224、SHA256、SHA384，分别能够生成 28 字节、32 字节、48 字节�
 
 
 
-<br />
+<br>
 
 
 

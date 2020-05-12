@@ -40,7 +40,7 @@ JSON Web Token (JWT) 是一种开放标准([RFC 7519](https://tools.ietf.org/htm
 
 JWTs 可以使用秘密(使用 **HMAC** 算法)或使用 **RSA** 或 **ECDSA** 的公钥/私钥对进行签名。
 
-<br />
+<br>
 
 虽然可以对 JWTs 进行加密以在各方之间提供保密性，但我们将重点关注已签名的令牌。
 
@@ -48,7 +48,7 @@ JWTs 可以使用秘密(使用 **HMAC** 算法)或使用 **RSA** 或 **ECDSA** �
 
 当使用公钥/私钥对对令牌进行签名时，签名还将确保只有持有私钥的一方才是签名的一方。
 
-<br />
+<br>
 
 ##  JSON Web Tokens 什么时候使用?
 
@@ -71,7 +71,7 @@ JWTs 可以使用秘密(使用 **HMAC** 算法)或使用 **RSA** 或 **ECDSA** �
 ```
 
 
-<br />
+<br>
 
 ## JSON Web Token 的结构是怎样的？
 
@@ -87,7 +87,7 @@ jwt 由 3 部分组成，每部分以 点(.) 分开，它们就是
 xxxxx.yyyyy.zzzzz
 ```
 
-<br />
+<br>
 
 ## header(头部)
 
@@ -104,7 +104,7 @@ header由两部分组成：token 的**类型**和使用什么**签名算法** �
 
 然后，这个 JSON 被 Base64Url 编码形成 jwt 的第**一**部分。
 
-<br />
+<br>
 
 ## Payload(载荷)
 
@@ -147,7 +147,7 @@ payload，它包含**claims** (声明)。声明是关于实体(通常是用户)�
 不要将机密信息放入JWT的有效载荷或头元素中，除非对其进行了加密。
 ```
 
-<br />
+<br>
 
 ## Signature(签名)
 
@@ -165,7 +165,7 @@ HMACSHA256(
 
 签名用于验证消息在整个过程中没有被更改，并且，对于使用私钥签名的令牌，它还可以验证 JWT 的发送方就是它所说的发送方。
 
-<br />
+<br>
 
 ## Putting all together(所有聚在一起)
 
@@ -175,7 +175,7 @@ HMACSHA256(
 
 <img width=500 height=200 src="https://api.bearcub.club/tech/other/jwt-1.png">
 
-<br />
+<br>
 
 ## JSON Web Tokens 怎样工作？
 
@@ -183,7 +183,7 @@ HMACSHA256(
 
 由于缺乏安全性，您也不应该在浏览器存储中存储敏感的会话数据。
 
-<br />
+<br>
 
 当用户希望访问受保护的路由或资源时，用户代理应该发送 JWT，
 通常在使用 **Authorization** header 中的 设置**Bearer** 。
@@ -205,7 +205,7 @@ Authorization: Bearer <token>
 
 <img width=500 height=200 src="https://api.bearcub.club/tech/other/jwt-2.png">
 
-<br />
+<br>
 
 ## HMAC
 HMAC是密钥相关的哈希运算消息认证码（Hash-based Message Authentication Code）的缩写，
