@@ -37,7 +37,7 @@ import { Pagination } from "@vuepress/plugin-blog/lib/client/components";
 import Tags from "../Tags";
 import _ from "loadsh";
 export default {
-  name: "tech",
+  name: "card",
   data() {
     return {
       moreData: [],
@@ -48,8 +48,8 @@ export default {
   },
 
   created() {
-    console.log(this.pagesData);
-    console.log(this.$pagination);
+    // console.log(this.pagesData);
+    // console.log(this.$pagination);
   },
 
   props: {

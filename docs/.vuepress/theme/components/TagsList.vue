@@ -31,11 +31,6 @@ export default {
     }
   },
 
-  created() {
-    console.log(this.tagData);
-    console.log(this.$withBase);
-  },
-
   components: {},
 
   methods: {

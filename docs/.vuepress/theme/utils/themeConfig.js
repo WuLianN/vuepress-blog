@@ -5,7 +5,7 @@ export const routerConfig = {
     "life": () => "life",
 }
 
-export const tagType = ['Vue', 'JavaScript', 'Nginx', 'HTTP', 'Node', 'Python', 'Other', 'Java', 'TypeScript']
+export const tagType = ['Vue', 'JavaScript', 'Nginx', 'HTTP', 'Node', 'Python', 'Other', 'CSS', 'TypeScript']
 
 export const tagTypeConfig = {
     "JavaScript": () => "rgb(123, 110, 5)",
@@ -15,7 +15,7 @@ export const tagTypeConfig = {
     "Node": () => " #555555",
     "Python": () => "#3572A5",
     "Other": () => "#178600",
-    "Java": () => "#b07219",
+    "CSS": () => "#b07219",
     "TypeScript": () => "#2b7489"
 }
 

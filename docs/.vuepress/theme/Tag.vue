@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import Universe from "./components/Universe";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 export default {
+  name: 'tag',
   data() {
     return {
       height: "",
@@ -19,7 +19,7 @@ export default {
   },
 
   created() {
-    console.log(this.$pagination.pages);
+    console.log(this.$pagination);
   },
 
   mounted() {

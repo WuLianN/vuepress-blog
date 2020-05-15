@@ -49,8 +49,8 @@ module.exports = {
                         itemPermalink: '/:year/:month/:day/:slug',
                         pagination: {
                             lengthPerPage: 4,
-                        },
-                    },
+                        }
+                    }
                 ],
 
                 frontmatters: [
@@ -64,8 +64,12 @@ module.exports = {
                         // Layout of the `entry page`
                         layout: 'Tags',
                         // Layout of the `scope page`
-                        scopeLayout: 'Tag'
-                    },
+                        scopeLayout: 'Tag',
+                        pagination: {
+                            lengthPerPage: 16,
+                            layout: 'Tag'
+                        }
+                    }
                 ]
             },
         ],

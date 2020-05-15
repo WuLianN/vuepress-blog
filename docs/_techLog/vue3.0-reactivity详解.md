@@ -185,7 +185,7 @@ export const mutableCollectionHandlers = {
 ```js
 const targetMap = new WeakMap() // track、trigger 都会使用这个变量
 
-const effectStack = [] // 只在 run() 中使用
+const effectStack = [] // 只在 run() 中使用 (新版本把run()去掉了，合并了，无伤大雅！)
 let activeEffect // run()中对activeEffect赋值
 
 // effect是一个函数，其下挂载了一些属性，用于描述其依赖和状态
