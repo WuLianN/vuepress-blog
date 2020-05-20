@@ -13,7 +13,7 @@
     <div class="right">
       <div class="right-nav zIndex">
         <router-link class="blackColor" to="/tech/">编程</router-link>
-        <router-link class="blackColor" to="/camera">摄影</router-link>
+        <router-link class="blackColor" to="/beauty">美女</router-link>
         <router-link class="blackColor" to="/life">生活</router-link>
       </div>
 

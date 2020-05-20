@@ -1,11 +1,11 @@
 export const routerConfig = {
     "/": () => "home",
     "tech": () => "tech",
-    "camera": () => "camera",
+    "beauty": () => "beauty",
     "life": () => "life",
 }
 
-export const tagType = ['Vue', 'JavaScript', 'Nginx', 'HTTP', 'Node', 'Python', 'Other', 'CSS', 'TypeScript']
+export const tagType = ['Vue', 'JavaScript', 'Nginx', 'HTTP', 'Node', 'Koa', 'Other', 'CSS', 'TypeScript']
 
 export const tagTypeConfig = {
     "JavaScript": () => "rgb(123, 110, 5)",
@@ -13,7 +13,7 @@ export const tagTypeConfig = {
     "Nginx": () => "rgb(6, 121, 27)",
     "HTTP": () => "#f34b7d",
     "Node": () => " #555555",
-    "Python": () => "#3572A5",
+    "Koa": () => "#3572A5",
     "Other": () => "#178600",
     "CSS": () => "#b07219",
     "TypeScript": () => "#2b7489"

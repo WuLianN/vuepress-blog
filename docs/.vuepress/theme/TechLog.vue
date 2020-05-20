@@ -6,8 +6,9 @@
     <div class="md">
       <FrontMatter :frontMatter="$page.frontmatter" />
       <Content class="md-content" />
+      <Vssue class="md-comment" :title="$title" />
     </div>
-    
+
     <Footer />
   </div>
 </template>
@@ -27,10 +28,6 @@ export default {
       scrollTop: 0,
       firstTime: true
     };
-  },
-
-  created() {
-    console.log(this.$page);
   },
 
   mounted() {
@@ -100,6 +97,12 @@ export default {
   margin: 0 0 30px 0;
   border-radius: 50px;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
+}
+
+.md-comment {
+  width: 800px;
+  position: relative;
+  margin: 50px 0 0 0;
 }
 
 .sticky {

@@ -19,7 +19,7 @@
 <script>
 import { needRepo, getTheBestRepo } from "../api";
 export default {
-  name: 'repo',
+  name: "repo",
   data() {
     return {
       repoData: []
@@ -28,7 +28,12 @@ export default {
 
   mounted() {
     getTheBestRepo().then(res => {
-      res.data.filter(item => {
+      let arr = [];
+      for (const [key, value] of Object.entries(res.data)) {
+        arr.push(value);
+      }
+
+     arr.filter(item => {
         const isNeed = needRepo.includes(item.name);
         if (isNeed) {
           this.repoData.push(item);

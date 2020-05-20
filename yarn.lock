@@ -862,6 +862,14 @@
     "@vssue/utils" "^1.4.0"
     axios "^0.18.1"
 
+"@vssue/api-github-v3@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@vssue/api-github-v3/-/api-github-v3-1.4.4.tgz#e32ed6d5910bb87c327de8576c107ee7e53bb6db"
+  integrity sha512-/ZQwO+/XgHz7hnVX6zLIWA0L1fmI4LBzQoRp1J56tonH6gbDpvl/VZ8VHIcSldHnpEsjf8wYmbIEz8rJd7jG2Q==
+  dependencies:
+    "@vssue/utils" "^1.4.0"
+    axios "^0.18.1"
+
 "@vssue/utils@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@vssue/utils/-/utils-1.4.0.tgz#3cc2fd8492a3409e343289981e2209b6ca2f8313"
@@ -876,6 +884,13 @@
   integrity sha512-ZzfmGhz0Pn0T56j4DZf+HUC6xJ4opZ2CMT9TJFg9VeU83DuqunWHbji878Mtxz5beUn0rv3FXthjJ2KWHIGC6g==
   dependencies:
     vssue "^1.4.3"
+
+"@vssue/vuepress-plugin-vssue@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@vssue/vuepress-plugin-vssue/-/vuepress-plugin-vssue-1.4.4.tgz#63b1f4a9ebdfd3bde9f28ab028047732109cc079"
+  integrity sha512-xMZbmWY6OZ7LKwQbguXn+gg/9/xXWeHjEeBdKOjkeUUBemwuyZbm9s73OLrk8hTLGeevecfBuSNnoUA98Dt/2A==
+  dependencies:
+    vssue "^1.4.4"
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   version "1.0.0"
@@ -4857,6 +4872,11 @@ media-typer@0.3.0:
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
+medium-zoom@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.0.5.tgz#81413dda20ccdd857141ff420cfab788dd32e20e"
+  integrity sha512-aLGa6WlTuFKWvH88bqTrY5ztJMN+D0hd8UX6BYc4YSoPayppzETjZUcdVcksgaoQEMg4cZSmXPg846fTp2rjRQ==
+
 mem@^4.0.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/mem/-/mem-4.3.0.tgz#461af497bc4ae09608cdb2e60eefb69bff744178"
@@ -7593,6 +7613,17 @@ vssue@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/vssue/-/vssue-1.4.3.tgz#861203a95e6b60fe2af661a07d800c0d51965e13"
   integrity sha512-xGnsLahqREumXgHnZ92MzNbIfwYqz8fZUQVGTe5/b2tCWsF5pFhO51fv4FVVDvVUwF6NsT3Kzy4HTVvJK2at4A==
+  dependencies:
+    "@vssue/utils" "^1.4.0"
+    github-markdown-css "^3.0.1"
+    vue "^2.6.10"
+    vue-i18n "^8.11.2"
+    vue-property-decorator "^8.1.1"
+
+vssue@^1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/vssue/-/vssue-1.4.4.tgz#2a342698b430aaf24019ad6ceaa389cfc3df2f0d"
+  integrity sha512-f+FwS4eFurR+YISeTRfFW2+b/48MYNgerq2pk1QbtYPYI7DIZH7wSIj/S/f+wfxolsyA+45Bx86vYEtwD8xT0Q==
   dependencies:
     "@vssue/utils" "^1.4.0"
     github-markdown-css "^3.0.1"

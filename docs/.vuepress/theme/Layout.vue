@@ -2,7 +2,7 @@
   <div id="layout">
     <Header :one="one" />
 
-    <div class="content" :style="{height: height}">
+    <div class="content">
       <keep-alive include="home">
         <ClientOnly>
           <component :is="layout" :height="height" />
@@ -22,7 +22,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
 import Tech from "./views/Tech";
-import Camera from "./views/Camera";
+import Beauty from "./views/Beauty";
 import Life from "./views/Life";
 import Universe from "./components/Universe";
 import { getCurrentPage, isNight } from "./utils";
@@ -38,18 +38,13 @@ export default {
     };
   },
 
-  created() {
-    // console.log(this.$pagination.pages);
-  },
-
   mounted() {
     this.height = document.documentElement.clientHeight - 50 + "px";
-
-    this.needTheme = isNight();
-
+    this.needTheme = isNight()
+    
     getOne()
       .then(res => {
-        const data = res.data.data;
+        const data = res.data;
 
         const randomIndex = Math.floor(Math.random() * data.length);
         const randomOne = data[randomIndex];
@@ -63,8 +58,14 @@ export default {
 
   computed: {
     layout() {
-      // console.log(this.$page.path);
       const name = getCurrentPage(this.$page.path);
+
+      if (name === "beauty") {
+        this.needTheme = false;
+      } else{
+        this.needTheme = isNight()
+      }
+
       return routerConfig[name]();
     }
   },
@@ -74,7 +75,7 @@ export default {
     Home,
     Tech,
     Footer,
-    Camera,
+    Beauty,
     Life,
     Universe
   }
@@ -82,6 +83,16 @@ export default {
 </script>
 
 <style scoped>
+#background {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    1600px at 70% 120%,
+    rgba(33, 39, 80, 1) 10%,
+    #020409 100%
+  );
+}
+
 #layout {
   width: 1200px;
   height: auto;

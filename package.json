@@ -9,8 +9,11 @@
         "build": "vuepress build docs"
     },
     "dependencies": {
+        "@vssue/api-github-v3": "^1.4.4",
+        "@vssue/vuepress-plugin-vssue": "^1.4.4",
         "axios": "^0.19.2",
         "loadsh": "^0.0.4",
+        "medium-zoom": "^1.0.5",
         "vuepress": "^1.4.1"
     },
     "devDependencies": {

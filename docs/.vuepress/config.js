@@ -70,7 +70,11 @@ module.exports = {
                             layout: 'Tag'
                         }
                     }
-                ]
+                ],
+
+                sitemap: {
+                    hostname: 'https://bearcub.club'
+                }
             },
         ],
 
@@ -80,6 +84,8 @@ module.exports = {
 
         ['@vuepress/back-to-top'],
 
-        ['@vuepress/nprogress']
+        ['@vuepress/nprogress'],
+
+      
     ],
 }
