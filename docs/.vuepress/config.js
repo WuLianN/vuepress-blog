@@ -90,8 +90,7 @@ module.exports = {
             platform: 'github',
             owner: 'WuLianN',
             repo: 'blog',
-            clientId: 'c61be63f6a6dbe1a8746',
-            clientSecret: 'e7d63d31864dc746ed6afb8201af2118ca09be63',
+          
             locale: 'zh'
         }]
     ],
