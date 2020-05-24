@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="waterfall" v-if="data">
-      <div class="box" v-for="(item, index) in data" :key="index">
+    <div class="waterfall" v-if="beauties">
+      <div class="box" v-for="(item, index) in beauties" :key="index">
         <img class="box-img" @load="load" @error="error(index)" :src="item" alt />
       </div>
     </div>
@@ -20,7 +20,7 @@ export default {
   name: "beauty",
   data() {
     return {
-      data: [],
+      beauties: [],
       debounce: "",
       pageNum: 1,
       loading: false,
@@ -29,7 +29,7 @@ export default {
   },
 
   watch: {
-    data: {
+    beauties: {
       immediate: true,
       handler() {
         this.$nextTick(function() {
@@ -43,7 +43,7 @@ export default {
 
   mounted() {
     getBeauties(1, 12).then(res => {
-      this.data = res.data.data.map(item => {
+      this.beauties = res.data.data.map(item => {
         return `${baseUrl}beauty/${item.fileName}`;
       });
     });
@@ -79,7 +79,7 @@ export default {
           } else {
             res.data.data.map(item => {
               const url = `${baseUrl}beauty/${item.fileName}`;
-              this.data.push(url);
+              this.beauties.push(url);
             });
           }
         });
