@@ -3,7 +3,7 @@
     <Header :one="one" />
 
     <div class="content">
-      <keep-alive include="home">
+      <keep-alive :include="['home', 'beauty']">
         <ClientOnly>
           <component :is="layout" :height="height" />
         </ClientOnly>
@@ -40,8 +40,8 @@ export default {
 
   mounted() {
     this.height = document.documentElement.clientHeight - 50 + "px";
-    this.needTheme = isNight()
-    
+    this.needTheme = isNight();
+
     getOne()
       .then(res => {
         const data = res.data;
@@ -59,14 +59,20 @@ export default {
   computed: {
     layout() {
       const name = getCurrentPage(this.$page.path);
-
-      if (name === "beauty") {
-        this.needTheme = false;
-      } else{
-        this.needTheme = isNight()
-      }
-
       return routerConfig[name]();
+    }
+  },
+
+  watch: {
+    layout(val) {
+      const night = isNight()
+      if (night === true) {
+        if (val === "beauty") {
+          this.needTheme = false;
+        } else {
+          this.needTheme = true;
+        }
+      }
     }
   },
 

@@ -2,7 +2,7 @@
   <div>
     <div class="waterfall" v-if="data">
       <div class="box" v-for="(item, index) in data" :key="index">
-        <img class="box-img" @load="load" :src="item" alt />
+        <img class="box-img" @load="load" @error="error(index)" :src="item" alt />
       </div>
     </div>
 
@@ -63,7 +63,7 @@ export default {
   components: { Loading },
 
   methods: {
-    handleScroll(e) {
+    handleScroll() {
       const scrollTop = Math.floor(document.documentElement.scrollTop);
       const scrollHeight = Math.floor(document.documentElement.scrollHeight);
       const clientHeight = Math.floor(document.documentElement.clientHeight);
@@ -90,6 +90,11 @@ export default {
     load() {
       // 关闭加载状态
       this.loading = false;
+    },
+
+    error(index) {
+      // 移除不能加载的图片
+      this.data.splice(index, 1);
     }
   }
 };

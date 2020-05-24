@@ -86,6 +86,8 @@ module.exports = {
 
         ['@vuepress/nprogress'],
 
-      
+        ['@vssue/vuepress-plugin-vssue', {
+           
+        }]
     ],
 }

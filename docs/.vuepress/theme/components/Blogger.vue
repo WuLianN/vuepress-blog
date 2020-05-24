@@ -3,10 +3,10 @@
     <img class="blogger-avatar" src="https://api.bearcub.club/user/avatar.jpg" alt />
     <div class="blogger-name">WuLianN</div>
     <div class="blogger-link">
-      <a href="https://github.com/WuLianN" target="_block">
+      <a href="https://github.com/WuLianN" target="_block" ref="noopener">
         <img class="blogger-link-github-logo" src="../../public/github.png" alt="github" />
       </a>
-       <a href="https://admin.bearcub.club" target="_block">
+       <a href="https://admin.bearcub.club" target="_block" ref="noopener">
         <img class="blogger-link-github-logo" src="../../public/profile.png" alt="admin" />
       </a>
     </div>
