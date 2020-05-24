@@ -33,9 +33,11 @@ export default {
       immediate: true,
       handler() {
         this.$nextTick(function() {
-          mediumZoom(".box-img", {
-            margin: 24
-          });
+          mediumZoom(
+            Array.from(document.querySelectorAll(".box-img")).filter(
+              img => !img.classList.contains("medium-zoom-image")
+            ) 
+          );
         });
       }
     }
