@@ -12,7 +12,7 @@
 
 <script>
 import { baseUrl, getBeauties } from "../api";
-import _ from "loadsh";
+import _ from "lodash";
 import Loading from "../components/Loading";
 import mediumZoom from "medium-zoom";
 

@@ -35,6 +35,7 @@ export const weatherTypeConfig = {
     '晴': '日晴.png',
     '多云': '日间多云.png',
     '晴间多云': '日间多云.png',
+    '雨': '小雨.png',
     '小雨': '小雨.png',
     '中雨': '中雨.png',
     '大雨': '大雨.png',

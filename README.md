@@ -59,7 +59,7 @@
 | TechLog.vue | 渲染编程md文件入口   |
 | 404.vue     | 处理404页面          |
 
-注：Tags、Tag、TechLog需要安装@vuepress/blog插件，并且在comfig.js中配置。
+注：Tags、Tag、TechLog需要安装@vuepress/blog插件，并且在config.js中配置。
 
 
 <br />

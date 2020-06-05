@@ -21,7 +21,7 @@
 import { tagType, tagTypeConfig } from "../utils/themeConfig";
 import { Pagination } from "@vuepress/plugin-blog/lib/client/components";
 import Tags from "../Tags";
-import _ from "loadsh";
+import _ from "lodash";
 export default {
   name: "card",
   data() {

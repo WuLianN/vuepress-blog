@@ -18,7 +18,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Toc from "./components/Toc";
 import FrontMatter from "./components/FrontMatter";
-import _ from "loadsh";
+import _ from "lodash";
 export default {
   name: "techLog",
   data() {
