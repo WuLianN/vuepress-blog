@@ -1,7 +1,7 @@
 const removeMd = require("remove-markdown");
 
 module.exports = {
-    title: 'blog',
+    title: '唔识哩个世界',
     description: '记录日积月累的知识',
     dest: './dist',
 
@@ -90,7 +90,7 @@ module.exports = {
             platform: 'github',
             owner: 'WuLianN',
             repo: 'blog',
-           
+         
             locale: 'zh'
         }]
     ],

@@ -2,7 +2,7 @@
 date: '2020-04-16'
 slug: nginx
 tag:
-- Nginx
+- Other
 
 title: nginx的基本配置
 description: nginx的基本配置!
