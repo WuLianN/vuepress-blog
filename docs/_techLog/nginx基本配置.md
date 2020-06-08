@@ -59,7 +59,9 @@ server {
 }
 ```
 
-<br> 
+<br>
+
+ 
 
 ## 重定向跳转(在http中配置)
 
@@ -144,7 +146,42 @@ http {
 
 
 
-<br> 
+<br>
+
+
+
+## gzip 压缩
+
+```nginx
+gzip on;
+gzip-min-length 1024;
+gzip-types text/plain text/css application/javascript application/json image/png image/jepg;
+gzip_proxied any;
+```
+
+* **gzip** on；开启 gzip 压缩
+
+* **gzip_min_length** 设置允许压缩的页面最小字节数，页面字节数从header头中的Content-Length中进行获取
+
+* **gzip_types**  匹配MIME类型进行压缩
+
+* **gzip_proxied** 
+
+  Nginx作为反向代理的时候启用，开启或者关闭后端服务器返回的结果，匹配的前提是后端服务器必须要返回包含"Via"的 header头。
+
+  -  off - 关闭所有的代理结果数据的压缩
+  -  expired - 启用压缩，如果header头中包含 "Expires" 头信息
+  -  no-cache - 启用压缩，如果header头中包含 "Cache-Control:no-cache" 头信息
+  -  no-store - 启用压缩，如果header头中包含 "Cache-Control:no-store" 头信息
+  -  private - 启用压缩，如果header头中包含 "Cache-Control:private" 头信息
+  -  no_last_modified - 启用压缩,如果header头中不包含 "Last-Modified" 头信息
+  -  no_etag - 启用压缩 ,如果header头中不包含 "ETag" 头信息
+  -  auth - 启用压缩 , 如果header头中包含 "Authorization" 头信息
+  -  any -  无条件启用压缩
+
+  
+
+<br>
 
 
 

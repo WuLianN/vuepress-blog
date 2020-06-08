@@ -2,13 +2,14 @@
   <div class="repo-wrap" v-if="repoData.length > 0">
     <p class="announce">仍在维护的小项目</p>
     <div class="repo" v-for="(item, index) in repoData" :key="index">
-      <a :href="item.html_url" target="_blank" class="repo-url">{{item.name}}</a>
+      <a :href="item.html_url" target="_blank" rel="noopener" class="repo-url">{{item.name}}</a>
       <div>{{item.description}}</div>
       <div class="repo-info">
         <span class="repo-lang">{{item.language}}</span>
         <a
           href="https://github.com/WuLianN/music-player/stargazers"
           target="_blank"
+          rel="noopener"
           class="repo-star"
         >{{item.stargazers_count}}</a>
       </div>

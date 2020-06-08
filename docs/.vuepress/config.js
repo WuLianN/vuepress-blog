@@ -90,8 +90,15 @@ module.exports = {
             platform: 'github',
             owner: 'WuLianN',
             repo: 'blog',
-         
+          
             locale: 'zh'
         }]
     ],
+
+    // chainWebpack: (config, isServer) => {
+    //     ['index', 'home'].forEach((name) => {
+    //         config.plugins.delete(`prefetch-${name}`)
+    //         config.plugins.delete(`preload-${name}`)
+    //     })
+    // }
 }
