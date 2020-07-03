@@ -37,7 +37,8 @@ export default {
             Array.from(document.querySelectorAll(".box-img")).filter(
               img => !img.classList.contains("medium-zoom-image")
             ),{
-              margin: 24
+              margin: 50,
+              background: "#fff"
             }
           );
         });
@@ -128,7 +129,6 @@ export default {
   border-radius: 5px;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 500;
 }
 
 .loading {
