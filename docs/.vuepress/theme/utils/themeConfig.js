@@ -5,7 +5,7 @@ export const routerConfig = {
     "life": () => "life",
 }
 
-export const tagType = ['Vue', 'JavaScript', 'HTTP', 'Node', 'Koa', 'Other', 'CSS', 'TypeScript']
+export const tagType = ['Vue', 'JavaScript', 'HTTP', 'Node', 'Koa', 'Other', 'CSS', '算法']
 
 export const tagTypeConfig = {
     "JavaScript": () => "rgb(123, 110, 5)",
@@ -15,7 +15,7 @@ export const tagTypeConfig = {
     "Koa": () => "#3572A5",
     "Other": () => "#2b7489",
     "CSS": () => "#b07219",
-    "TypeScript": () => "#2b7489"
+    "算法": () => "#2b7489"
 }
 
 const baseUrl = 'https://api.bearcub.club/tag/';

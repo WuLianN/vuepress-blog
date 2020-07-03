@@ -50,10 +50,15 @@ export default {
         const randomOne = data[randomIndex];
 
         this.one = randomOne;
+
+        // 存到sessionStorage
+        window.sessionStorage.setItem('one', randomOne)
       })
       .catch(err => {
         console.log(err);
       });
+
+      
   },
 
   computed: {

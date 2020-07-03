@@ -1,6 +1,6 @@
 <template>
   <div class="techLog">
-    <Header :class="{sticky: isSticky}" />
+    <Header :one="one" :class="{sticky: isSticky}" />
 
     <Toc :headers="$page.headers" />
     <div class="md">
@@ -26,7 +26,8 @@ export default {
       isSticky: false,
       debounce: null,
       scrollTop: 0,
-      firstTime: true
+      firstTime: true,
+      one: ""
     };
   },
 
@@ -36,6 +37,8 @@ export default {
       trailing: true
     });
     window.addEventListener("scroll", this.debounce, true);
+
+    this.one = window.sessionStorage.getItem("one");
   },
 
   destroyed() {

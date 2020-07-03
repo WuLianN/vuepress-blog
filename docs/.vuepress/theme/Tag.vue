@@ -1,6 +1,6 @@
 <template>
   <div class="tag">
-    <Header />
+    <Header :one="one" />
     <Card :pagesData="$pagination.pages" :height="height" />
     <Footer />
   </div>
@@ -11,10 +11,11 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 export default {
-  name: 'tag',
+  name: "tag",
   data() {
     return {
       height: "",
+      one: ""
     };
   },
 
@@ -23,8 +24,9 @@ export default {
   },
 
   mounted() {
-    this.height =
-      document.documentElement.clientHeight - 50 + "px";
+    this.height = document.documentElement.clientHeight - 50 + "px";
+
+    this.one = window.sessionStorage.getItem("one");
   },
 
   components: {

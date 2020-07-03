@@ -1,6 +1,6 @@
 <template>
   <div class="tags">
-    <Header />
+    <Header :one="one" />
     <TagsList :tagData="tagData" />
     <Footer />
   </div>
@@ -15,7 +15,8 @@ export default {
   name: "tags",
   data() {
     return {
-      tagData: null
+      tagData: null,
+      one: ''
     };
   },
 
@@ -29,7 +30,11 @@ export default {
 
   components: { Header, Footer, TagsList },
 
-  methods: {}
+  methods: {},
+
+  mounted(){
+    this.one = window.sessionStorage.getItem("one");
+  }
 };
 </script>
 

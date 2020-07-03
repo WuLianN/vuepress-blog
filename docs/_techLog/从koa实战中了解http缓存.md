@@ -50,7 +50,7 @@ meta:
 * **no-cache**：它的字面含义容易与 no-store  搞混，实际的意思并不是不允许缓存，而是可以缓存，但在使用之前必须要去服务器验证是否过期，是否有最新的版本；
 * **must-revalidate**：又是一个和 no-cache 相似的词，它的意思是如果缓存不过期就可以继续使用，但过期了如果还想用就必须去服务器验证。
 
-<img width="600" height="700" src="https://api.bearcub.club/tech/http/http-10.png">
+<img width="600" height="700" src="C:\Users\smile 8\Desktop\http-10.png">
 
 
 <br>
