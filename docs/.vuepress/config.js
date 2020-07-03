@@ -90,7 +90,7 @@ module.exports = {
             platform: 'github',
             owner: 'WuLianN',
             repo: 'blog',
-      
+           
             locale: 'zh'
         }]
     ],
